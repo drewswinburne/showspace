@@ -9,10 +9,10 @@
 
 <% @shows.each do |show| %>
 <%#= show.date.strftime("%Y-%m-%d") %>
-<% if day.strftime("%Y-%m-%d") == show.starts_at.strftime("%Y-%m-%d") %>
+<% if day.strftime("%Y-%m-%d") == show.starts_at_date.strftime("%Y-%m-%d") %>
 <div class="show">
 <%#= show.date.strftime('%A') %>
-<%= show.starts_at.strftime('%I:%M') %>
+<%= show.starts_at_hour.strftime('%I:%M') %>
     <% @performances.each do |perf| %>
  <% if perf.show.id == show.id %>
    <%= link_to perf.artist.name, "artists/#{perf.artist_id}" %>

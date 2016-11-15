@@ -13,7 +13,7 @@
   <div class="perf">
   <% @performances.each do |perf| %>
   <img src="<%= perf.show.flyer_img %>">
-  <%= perf.show.date.strftime("%A, %m/%d") %>
+  <%= perf.show.starts_at_date.strftime("%A, %m/%d") %>
   <% end %>
 </div>
 </section>

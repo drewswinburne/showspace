@@ -20,7 +20,7 @@ redirect_to shows_path
 
 private
 def show_params
-  params.require(:show).permit(:flyer_img, :starts_at)
+  params.require(:show).permit(:flyer_img, :starts_at_date, :starts_at_hour)
 
 end
 

@@ -35,9 +35,10 @@ ActiveRecord::Schema.define(version: 20161111170310) do
 
   create_table "shows", force: :cascade do |t|
     t.string   "flyer_img"
-    t.datetime "starts_at"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.date     "starts_at_date"
+    t.time     "starts_at_hour"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
   add_foreign_key "performances", "artists"
