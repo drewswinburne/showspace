@@ -17,13 +17,13 @@ anyband = Artist.create(name: "Permenant Waves", bio: "Jeff's new band", img_url
 funband = Artist.create(name: "Evil Sword", bio: "Costume Band", img_url: "http://www.sgmgrecords.com/press-photos/evil-sword-02.jpg", music_url: "http://www.google.com")
 
 firstshow = Show.create(flyer_img: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTf6BKDwvo1ujgr3qk6oSIM_luYzeuKLuqwgTprs-onFzdl3zQu",
-date: "2016-11-20 7:00:00")
+starts_at: "2016-11-20 7:00:00")
 secondshow = Show.create(flyer_img: "http://www.michiganduckrescueandsanctuary.com/wp-content/uploads/2014/12/marold_donate_transparent_504.png",
-date: "2016-11-21 9:00:00")
+starts_at: "2016-11-21 9:00:00")
 thirdshow = Show.create(flyer_img: "https://s-media-cache-ak0.pinimg.com/originals/6a/c9/dc/6ac9dcffc63e64d80b54cd2d8647cb02.jpg",
-date: "2016-11-22 8:00:00")
+starts_at: "2016-11-22 8:00:00")
 fourthshow = Show.create(flyer_img: "http://i4.mirror.co.uk/incoming/article7220601.ece/ALTERNATES/s615/PAY-Donald-Trump-Duck.jpg",
-date: "2016-11-23 7:00:00")
+starts_at: "2016-11-23 7:00:00")
 
 
 firstperf = Performance.create(artist_id: 1, show_id:1)

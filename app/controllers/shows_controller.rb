@@ -9,7 +9,19 @@ class ShowsController < ApplicationController
   end
 
   def new
-
+    @show = Show.new
   end
+
+  def create
+    @show = Show.create(show_params)
+@show.save
+redirect_to shows_path
+  end
+
+private
+def show_params
+  params.require(:show).permit(:flyer_img, :starts_at)
+
+end
 
 end

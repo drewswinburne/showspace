@@ -1,1 +1,10 @@
-<%= @artist.name %>
+<%= form_for @show do |f| %>
+<%= f.label :flyer_img %>
+<%= f.text_field :flyer_img %>
+<%= f.date_field(:starts_at_date) %>
+<%= f.time_field(:starts_at_hour) %>
+<%= f.submit %>
+<%#= f.input :starts_at_date, as: :string, input_html: { class: 'datepicker' } %>
+<%#= f.input :starts_at_hour, collection: 0..24 %>
+<%#= f.input :starts_at_min, collection: [0, 15, 30, 45] %>
+<% end %>
