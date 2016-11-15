@@ -1,0 +1,27 @@
+
+<main>
+
+<% @days_from_this_week.each do |day| %>
+
+<div class="day">
+
+      <%= day.strftime('%A, %m/%d') %>
+
+<% @shows.each do |show| %>
+<%#= show.date.strftime("%Y-%m-%d") %>
+<% if day.strftime("%Y-%m-%d") == show.date.strftime("%Y-%m-%d") %>
+<div class="show">
+<%#= show.date.strftime('%A') %>
+<%= show.date.strftime('%I:%M') %>
+    <% @performances.each do |perf| %>
+ <% if perf.show.id == show.id %>
+   <%= link_to perf.artist.name, "artists/#{perf.artist_id}" %>
+   <% end %>
+  <% end %>
+  <% end %>
+  <% end %>
+
+</div>
+</div>
+  <% end %>
+</main>
