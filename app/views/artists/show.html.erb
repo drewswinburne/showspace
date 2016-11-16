@@ -2,19 +2,36 @@
 <main>
 
 <h2><%= @artist.name %></h2>
+<div class="artistshow">
+<div class="artistinfo">
+<h3>Bio:</h3>
 <p><%= @artist.bio %></p>
-<img src= "<%= @artist.img_url %>">
-<a href="<%= @artist.music_url %>">Link too Music</a>
+<a href="<%= @artist.music_url %>">Link to Music</a> <br>
+<%= link_to "Edit This Artist", edit_artist_path %> //
+<%= link_to "Delete This Artist", artist_path, method: :delete, data: {confirm: "Are you Sure?"} %>
 
-<%= link_to "Edit This Artist", edit_artist_path %>
-
-<section>
-  Upcoming Shows <%= link_to "New Show", new_artist_performance_path(@artist) %>
-  <div class="perf">
-  <% @performances.each do |perf| %>
-  <img src="<%= perf.show.flyer_img %>">
-  <%= perf.show.starts_at_date.strftime("%A, %m/%d") %>
-  <% end %>
 </div>
+
+<div class="artistpic" style="background-image: url(<%= @artist.img_url %>)">
+
+</div>
+</div>
+<section>
+  <h2>Upcoming Shows</h2>
+  <h3><%= link_to "Add to a Show", new_performance_path %></h3>
+
+  <% @performanceorder.each do |perf| %>
+  <div class="perf">
+    <div class="perfinfo">
+    <%= link_to perf.show.starts_at_date.strftime("%A, %m/%d"), show_path(perf.show.id) %>
+    <%= link_to "Remove from show", performance_path(perf),
+      method: :delete %>
+
+    </div>
+    <div class="perfpic" style="background-image: url(<%= perf.show.flyer_img %>)">
+    </div>
+  </div>
+  <% end %>
+
 </section>
 </main>

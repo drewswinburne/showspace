@@ -1,0 +1,7 @@
+Add an artist to this show
+
+<%= form_for @performance do |f| %>
+  <%= f.select :artist_id, Artist.all.collect { |artist| [artist.name, artist.id]} %>
+  <%= f.select :show_id, Show.all.collect {|show| [show.starts_at_date, show.id] } %>
+  <%= f.submit %>
+  <% end %>

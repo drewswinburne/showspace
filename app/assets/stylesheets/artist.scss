@@ -1,11 +1,67 @@
 // Place all the styles related to the Artist controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.artist {
-  outline: black 4px dashed;
-  margin: 5px;
-  height: 325px;
-  width: 300px;
-  display: inline-block;
+.artistshow {
+  // display:flex; ??
+  width: 620px;
+  height: 320px;
+  outline: white solid 2px;
+  background-color: rgba(12,12,12,.5)
+}
 
+.artistinfo {
+  // outline: white solid 2px;
+  transform: translate(5%, -65%);
+  // outline: solid blue 2px;
+  width: 300px;
+  height: 300px;
+
+  display: inline-block;
+}
+
+.artist:hover {
+  outline: white 4px dashed;
+}
+
+.artistpic {
+  // outline: solid blue 2px;
+  background-size: cover;
+  // background-position:right;
+  height: 300px;
+  width: 300px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  display: inline-block;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+}
+
+.perf {
+  display: flex;
+  width: 620px;
+  height: 320px;
+  outline: white solid 2px;
+  background-color: rgba(12,12,12,.5);
+  margin-top: 10px;
+}
+
+.perf img {
+  max-width: 620px;
+  max-height: 320px;
+}
+
+.perfinfo {
+  display: inline-block;
+  // outline: red solid 2px;
+  width: 300px;
+  height: 300px;
+}
+.perfpic {
+  background-size: cover;
+  display: inline-block;
+  outline: white solid 1px;
+  width: 300px;
+  height: 300px;
 }

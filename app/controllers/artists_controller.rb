@@ -11,6 +11,7 @@ end
 
 def show
   @performances = Performance.where(artist_id: params[:id])
+  @performanceorder = @performances.sort_by {|x| x.show.starts_at_date}
 end
 
 def new
@@ -18,7 +19,12 @@ def new
 end
 
 def create
-  @artist = Arist.create(artist_params)
+  @artist = Artist.new(artist_params)
+  if @artist.save
+    redirect_to artists_path
+  else
+    render :new
+  end
 end
 
 def edit

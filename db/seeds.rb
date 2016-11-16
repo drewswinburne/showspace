@@ -13,7 +13,7 @@ Performance.destroy_all
 
 newband = Artist.create(name: "All Ball", bio: "Cricket and Geoff", img_url: "https://img.buzzfeed.com/buzzfeed-static/static/2015-02/17/12/enhanced/webdr05/enhanced-buzz-8759-1424195616-28.jpg", music_url: "http://www.google.com")
 coolband = Artist.create(name: "Beach House", bio: "Victoria and Alex", img_url: "http://beardedgentlemenmusic.com/wp-content/uploads/2015/08/Beach-House-Depression-Cherry-Pic.jpg", music_url: "http://www.google.com")
-anyband = Artist.create(name: "Permenant Waves", bio: "Jeff's new band", img_url: "https://freemusicarchive.org/file/images/artists/Thank_You_-_2009113015626639.jpg?width=290&height=290", music_url: "http://www.google.com")
+anyband = Artist.create(name: "Permenent Waves", bio: "Jeff's new band", img_url: "https://freemusicarchive.org/file/images/artists/Thank_You_-_2009113015626639.jpg?width=290&height=290", music_url: "http://www.google.com")
 funband = Artist.create(name: "Evil Sword", bio: "Costume Band", img_url: "http://www.sgmgrecords.com/press-photos/evil-sword-02.jpg", music_url: "http://www.google.com")
 
 

@@ -1,0 +1,10 @@
+<main>
+  <%= @show.starts_at_date %> // <%= @show.starts_at_hour.strftime('%I:%M') %>
+<img src=" <%= @show.flyer_img %>" style="height:300px; width:300px">
+<%= link_to "Edit this show", edit_show_path %>
+
+Lineup:
+<% @performances.each do |perf| %>
+<%= link_to perf.artist.name, "../artists/#{perf.artist_id}" %>
+<% end %>
+</main>

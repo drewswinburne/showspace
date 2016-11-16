@@ -13,42 +13,121 @@
  *= require_tree .
  *= require_self
  */
+body {
+  font-family: Helvetica, sans-serif;
+  background-image: url(http://wallpapercave.com/wp/rXfXget.jpg);
+    color: white;
+    background-color: black;
+padding: 10px;
+}
+
 
 h1, h2 {
-  font-family: Helvetica, sans-serif;
   text-align: center;
+
+  text-shadow: #000 0px 0px 1px;
+     -webkit-font-smoothing: antialiased;
 }
 h1 {
-  line-height: 20px;
+  line-height: 30px;
 }
 
 nav {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  background-color: #2222ff;
+  /*align-content: space-between;
+  align-items:center;
+  justify-content: space-between;*/
+  /*outline: solid red 2px;*/
+  /*background-color: #2222ff;*/
 }
 
-nav ul li {
+ul {
+  align-self: center;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: space-between;
+  padding: 0;
+  margin: 0 auto;
+}
+
+li {
+
   text-align: center;
   display:inline-block;
   text-decoration: none;
   background-color: #8888ff;
   line-height: 35px;
+  padding: 10px;
   margin-left: 10px;
-  padding: 18px;
+  border-radius: 18%;
+  border-bottom: #a2a2a2 solid 5px;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+}
+
+li:last-child {
+  /*margin-right: 10px;*/
 }
 
 a {
   text-decoration: none;
+  color: white;
 }
 
 ul li:hover {
-  background-color: orange;
+  background-color: red;
+  border-bottom: #626262 solid 5px;
 
 }
 
 main {
   width: 650px;
   margin: 0 auto;
+}
+
+.artist {
+  outline: black 4px dashed;
+ background-size: cover;
+ background-color: #E9EBE7;
+ width: 300px;
+ height: 300px;
+ text-align: center;
+ line-height: 300px;
+ -ms-transition:.5s;
+ -moz-transition:.5s;
+ -webkit-transition:.5s;
+ transition:.5s;
+ margin: 5px;
+ display: inline-block;
+
+}
+
+.artist a {
+  /*margin: 0;*/
+ /*position: absolute;*/
+ width: 100%;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ font-size: 30px;
+ color: white;
+ -o-transition:.5s;
+ -ms-transition:.5s;
+ -moz-transition:.5s;
+ -webkit-transition:.5s;
+ transition:.5s;
+ text-shadow: #000 0px 0px 1px;
+    -webkit-font-smoothing: antialiased;
+}
+
+.artist a:hover {
+  color: red;
+}
+
+h2 a:hover {
+  color: red;
 }
