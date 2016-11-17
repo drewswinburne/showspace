@@ -1,12 +1,23 @@
 class ShowsController < ApplicationController
+ before_action :set_week, except: [:new, :create]
 
   def index
     @shows = Show.all
     @performances = Performance.all
-    today = Date.today # Today's date
-    @days_from_this_week = (today.at_beginning_of_week..today.at_end_of_week).map
+    end
 
-  end
+def set_week
+  @today = Date.today # Today's date
+  @days_from_this_week = (@today.at_beginning_of_week..@today.at_end_of_week).map
+  @days_from_last_week = ((@today.at_beginning_of_week - 7.days)..(@today.at_end_of_week - 7.days)).map
+end
+
+def last_week
+  @days_from_this_week = @days_from_last_week
+  @shows = Show.all
+
+  render :index
+end
 
   def new
     @show = Show.new
@@ -20,8 +31,11 @@ class ShowsController < ApplicationController
 
   def create
     @show = Show.new(show_params)
-@show.save
-redirect_to shows_path
+    if @show.save
+      redirect_to show_path(@show)
+    else
+      render :new
+    end
   end
 
   def edit
@@ -31,10 +45,15 @@ redirect_to shows_path
   def update
     @show = Show.find(params[:id])
     @show.update(show_params)
-    redirect_to @show
+    if @show.save
+      redirect_to show_path(@show)
+    else
+      render :edit
+    end
   end
 
   def destroy
+    @show = Show.find(params[:id])
   @show.destroy
   redirect_to shows_path
 end
@@ -42,7 +61,7 @@ end
 
 private
 def show_params
-  params.require(:show).permit(:flyer_img, :starts_at_date, :starts_at_hour)
+  params.require(:show).permit(:flyer_img, :starts_at_date, :starts_at_hour, :venue, :cost)
 
 end
 

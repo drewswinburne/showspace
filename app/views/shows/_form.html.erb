@@ -1,0 +1,25 @@
+<% @show.errors.full_messages.each do |message| %>
+<ul>
+  <li><%= message %></li>
+
+</ul>
+<% end %>
+
+
+<%= form_for @show do |f| %>
+<%= f.label :flyer_image %>
+<%= f.text_field :flyer_img %><br>
+<%= f.label :date %>
+
+<%= f.date_field(:starts_at_date) %><br>
+<%= f.label :time %>
+
+<%= f.time_field(:starts_at_hour) %><br>
+<%= f.label :venue %>
+<%= f.text_field :venue %><br>
+<%= f.label :cost %>
+<%= f.text_field :cost %><br>
+
+<%= f.submit %>
+
+<% end %>

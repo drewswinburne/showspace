@@ -24,12 +24,16 @@ padding: 10px;
 
 h1, h2 {
   text-align: center;
-
   text-shadow: #000 0px 0px 1px;
      -webkit-font-smoothing: antialiased;
 }
 h1 {
-  line-height: 30px;
+  line-height: 25px;
+}
+
+h3 {
+  margin-top: 4px;
+  margin-bottom: 6px;
 }
 
 nav {
@@ -40,7 +44,7 @@ nav {
   /*background-color: #2222ff;*/
 }
 
-ul {
+nav ul {
   align-self: center;
   text-decoration: none;
   display: flex;
@@ -51,14 +55,14 @@ ul {
   margin: 0 auto;
 }
 
-li {
+nav ul li {
 
   text-align: center;
   display:inline-block;
   text-decoration: none;
   background-color: #8888ff;
-  line-height: 35px;
-  padding: 10px;
+  line-height: 32px;
+  padding: 8px;
   margin-left: 10px;
   border-radius: 18%;
   border-bottom: #a2a2a2 solid 5px;
@@ -69,16 +73,13 @@ li {
   transition:.5s;
 }
 
-li:last-child {
-  /*margin-right: 10px;*/
-}
 
 a {
   text-decoration: none;
   color: white;
 }
 
-ul li:hover {
+nav ul li:hover {
   background-color: red;
   border-bottom: #626262 solid 5px;
 
@@ -128,6 +129,24 @@ main {
   color: red;
 }
 
-h2 a:hover {
+a:hover {
   color: red;
+}
+
+li a:hover{
+  color: lemonchiffon;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  margin: 0 auto;
+  padding-top:40px;
+}
+
+.show a {
+  color: lemonchiffon;
 }

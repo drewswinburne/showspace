@@ -1,20 +1,21 @@
 
 <main>
 
-<h2><%= link_to "Add New Show", new_show_path %> // <%= link_to "Add an artist to a show", new_performance_path %>
-</h2>
 <% @days_from_this_week.each do |day| %>
 
 <div class="day">
 
-      <%= day.strftime('%A, %m/%d') %><br>
+    <h3>  <%= day.strftime('%A, %m/%d') %></h3>
 
 <% @shows.each do |show| %>
 <%#= show.date.strftime("%Y-%m-%d") %>
 <% if day.strftime("%Y-%m-%d") == show.starts_at_date.strftime("%Y-%m-%d") %>
 <span class="show">
-<%#= show.date.strftime('%A') %>
-<%= link_to show.starts_at_hour.strftime('%I:%M'), show_path(show) %>
+
+<%= link_to show.starts_at_hour.strftime('%I:%M'), show_path(show) %>,
+<%= link_to show.venue, show_path(show) %>,
+<%= link_to show.cost, show_path(show) %>:
+
 </span>
     <% @performances.each do |perf| %>
  <% if perf.show.id == show.id %>
@@ -27,4 +28,6 @@
 
 </div>
   <% end %>
+  <h2><%= link_to "Add New Show", new_show_path %> // <%= link_to "Add an artist to a show", new_performance_path %>
+  </h2>
 </main>

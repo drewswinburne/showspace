@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .artistshow {
-  // display:flex; ??
+  display:flex;
   width: 620px;
   height: 320px;
   outline: white solid 2px;
@@ -11,12 +11,16 @@
 
 .artistinfo {
   // outline: white solid 2px;
-  transform: translate(5%, -65%);
+  // transform: translate(5%, -65%);
   // outline: solid blue 2px;
   width: 300px;
   height: 300px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
 
-  display: inline-block;
 }
 
 .artist:hover {
@@ -57,11 +61,21 @@
   // outline: red solid 2px;
   width: 300px;
   height: 300px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  margin-left: 10px;
 }
 .perfpic {
   background-size: cover;
-  display: inline-block;
+  // display: inline-block;
   outline: white solid 1px;
   width: 300px;
   height: 300px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.editdelete {
+padding-top: 23px;
+
 }

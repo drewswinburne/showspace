@@ -20,16 +20,16 @@ funband = Artist.create(name: "Evil Sword", bio: "Costume Band", img_url: "http:
 
 
 
-firstshow = Show.create(flyer_img: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTf6BKDwvo1ujgr3qk6oSIM_luYzeuKLuqwgTprs-onFzdl3zQu",
+firstshow = Show.create(venue: "The Crown", cost: "$5", flyer_img: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTf6BKDwvo1ujgr3qk6oSIM_luYzeuKLuqwgTprs-onFzdl3zQu",
 starts_at_date: "2016-11-19",
 starts_at_hour: "7:00:00")
-secondshow = Show.create(flyer_img: "http://www.michiganduckrescueandsanctuary.com/wp-content/uploads/2014/12/marold_donate_transparent_504.png",
+secondshow = Show.create(venue: "Floristree", cost: "$5", flyer_img: "http://www.michiganduckrescueandsanctuary.com/wp-content/uploads/2014/12/marold_donate_transparent_504.png",
 starts_at_date: "2016-11-20",
 starts_at_hour: "7:30:00")
-thirdshow = Show.create(flyer_img: "https://s-media-cache-ak0.pinimg.com/originals/6a/c9/dc/6ac9dcffc63e64d80b54cd2d8647cb02.jpg",
+thirdshow = Show.create(venue: "Metro Gallery", cost: "$8", flyer_img: "https://s-media-cache-ak0.pinimg.com/originals/6a/c9/dc/6ac9dcffc63e64d80b54cd2d8647cb02.jpg",
 starts_at_date: "2016-11-18",
 starts_at_hour: "8:00:00")
-fourthshow = Show.create(flyer_img: "http://i4.mirror.co.uk/incoming/article7220601.ece/ALTERNATES/s615/PAY-Donald-Trump-Duck.jpg",
+fourthshow = Show.create(venue: "The Crown", cost: "$5-10", flyer_img: "http://i4.mirror.co.uk/incoming/article7220601.ece/ALTERNATES/s615/PAY-Donald-Trump-Duck.jpg",
 starts_at_date: "2016-11-21",
 starts_at_hour: "9:00:00")
 

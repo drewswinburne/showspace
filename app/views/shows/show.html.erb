@@ -1,10 +1,15 @@
 <main>
-  <%= @show.starts_at_date %> // <%= @show.starts_at_hour.strftime('%I:%M') %>
-<img src=" <%= @show.flyer_img %>" style="height:300px; width:300px">
+  <div class="perf">
+    <div class="perfinfo">
+  <h3><%= @show.starts_at_date %> // <%= @show.starts_at_hour.strftime('%I:%M') %></h3>
+  <p><%= @show.venue %>, <%= @show.cost %></p>
+  Lineup:<br>
+  <% @performances.each do |perf| %>
+  <%= link_to perf.artist.name, "../artists/#{perf.artist_id}" %><br>
+  <% end %>
+</div>
+<img src=" <%= @show.flyer_img %>" class="perfpic"></div>
 <%= link_to "Edit this show", edit_show_path %>
+<%= link_to "Delete this show", show_path, method: :delete%>
 
-Lineup:
-<% @performances.each do |perf| %>
-<%= link_to perf.artist.name, "../artists/#{perf.artist_id}" %>
-<% end %>
 </main>

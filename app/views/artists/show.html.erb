@@ -7,8 +7,11 @@
 <h3>Bio:</h3>
 <p><%= @artist.bio %></p>
 <a href="<%= @artist.music_url %>">Link to Music</a> <br>
-<%= link_to "Edit This Artist", edit_artist_path %> //
+<div class="editdelete">
+
+<p><%= link_to "Edit This Artist", edit_artist_path %> //
 <%= link_to "Delete This Artist", artist_path, method: :delete, data: {confirm: "Are you Sure?"} %>
+</div>
 
 </div>
 
@@ -23,9 +26,14 @@
   <% @performanceorder.each do |perf| %>
   <div class="perf">
     <div class="perfinfo">
-    <%= link_to perf.show.starts_at_date.strftime("%A, %m/%d"), show_path(perf.show.id) %>
-    <%= link_to "Remove from show", performance_path(perf),
-      method: :delete %>
+    <h3><%= link_to perf.show.starts_at_date.strftime("%A, %m/%d"), show_path(perf.show.id) %></h3>
+    <p>
+      <%= perf.show.venue %>,
+      <%= perf.show.cost %>
+    </p>
+
+    <p><%= link_to "Remove from show", performance_path(perf),
+      method: :delete %></p>
 
     </div>
     <div class="perfpic" style="background-image: url(<%= perf.show.flyer_img %>)">
