@@ -1,24 +1,31 @@
-# README
+# Showspace Rails App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## MVP
 
-Things you may want to cover:
+- I want the user to be able to see all upcoming shows for the week, DONE
 
-* Ruby version
+- view all bands on each show from main page DONE
 
-* System dependencies
+- view band's details page, with all upcoming shows DONE
 
-* Configuration
+- add/edit/delete bands shows on their details page DONE
 
-* Database creation
+- Have to figure out how to put in date time with form DONE
 
-* Database initialization
+- User can't create shows or artists without all fields filled in, bio length is limited DONE
 
-* How to run the test suite
+- Artist show "shows" need to be listed in date order, not ID DONE
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+## Silver
 
-* ...
+- make add band to show functionality? DONE
+- Login users, only allow users to edit their band
+  - okay but then how do they add other bands to their show?
+- Deploy DONE
+- randomize display of all artists
+
+## Gold
+
+- past and future weeks displayed
+- Admin functionality?

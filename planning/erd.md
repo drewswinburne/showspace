@@ -10,18 +10,18 @@ Artists >---< Shows
 ```
 
 Artist properties:
-name
-bio
-img_url
-music_url
+* name
+* bio
+* img_url
+* music_url
 
 Performance properties:
-artist_id
-show_id
+* artist_id
+* show_id
 
 Show properties:
-venue
-cost
-flyer_img
-starts_at_date
-starts_at_hour
+* venue
+* cost
+* flyer_img
+* starts_at_date
+* starts_at_hour
