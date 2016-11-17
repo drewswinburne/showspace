@@ -14,7 +14,8 @@
  *= require_self
  */
 body {
-  font-family: Helvetica, sans-serif;
+  font-family: 'Montserrat', Helvetica, sans-serif;
+
   background-image: url(http://wallpapercave.com/wp/rXfXget.jpg);
     color: white;
     background-color: black;
@@ -28,7 +29,9 @@ h1, h2 {
      -webkit-font-smoothing: antialiased;
 }
 h1 {
-  line-height: 25px;
+  line-height: 20px;
+  font-size: 4em;
+  font-family: 'Shrikhand', sans-serif;;
 }
 
 h3 {
