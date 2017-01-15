@@ -23,6 +23,10 @@ end
     @show = Show.new
   end
 
+  def disclaimer
+    render :disclaimer
+  end
+
   def show
     @show = Show.find(params[:id])
     @performances = Performance.where(show_id: params[:id])

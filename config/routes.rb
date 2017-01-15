@@ -5,5 +5,6 @@ get "shows/lastweek", to: 'shows#last_week'
   resources :artists
   resources :shows
   resources :performances
+  get "/disclaimer", to: "shows#disclaimer"
 
 end

@@ -5,7 +5,7 @@
 
 <div class="day">
 
-    <h3>  <%= day.strftime('%A, %m/%d') %></h3>
+  <h3>  <%= day.strftime('%A, %m/%d') %></h3>
 
 <% @shows.each do |show| %>
 <%#= show.date.strftime("%Y-%m-%d") %>
@@ -30,4 +30,5 @@
   <% end %>
   <h2><%= link_to "Add New Show", new_show_path %> // <%= link_to "Add an artist to a show", new_performance_path %>
   </h2>
+  <h3><%= link_to "Disclaimer", disclaimer_path %></h3>
 </main>

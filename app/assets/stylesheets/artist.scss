@@ -20,7 +20,15 @@
   margin-left: 10px;
   display: flex;
   flex-direction: column;
+}
 
+.disclaimer {
+  width: 620px;
+  height: 320px;
+  outline: white solid 2px;
+  background-color: rgba(12,12,12,.5);
+  padding: 12px;
+  margin-top: 10px;
 }
 
 .artist:hover {
