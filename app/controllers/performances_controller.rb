@@ -5,6 +5,7 @@ end
 
 def new
   @performance = Performance.new
+  @upcoming = Show.where("starts_at_date > ?", DateTime.now - 1)
   # @show = Show.find(params[:id])
 end
 

@@ -10,8 +10,11 @@ def index
 end
 
 def show
-  @performances = Performance.where(artist_id: params[:id])
-  @performanceorder = @performances.sort_by {|x| x.show.starts_at_date}
+  # @performances = Performance.where({artist_id: params[:id]})
+  @performances = Performance.where("artist_id = ?", params[:id])
+  # @performanceorder = @performances
+  @upcoming = @performances.select {|x| x.show.starts_at_date > DateTime.now}
+  @performanceorder = @upcoming.sort_by {|x| x.show.starts_at_date}
 end
 
 def new

@@ -1,9 +1,10 @@
 <div class="form">
   <h2>Add an artist to this show
 </h2>
-<%= form_for @performance do |f| %>
-  <%= f.select :artist_id, Artist.all.collect { |artist| [artist.name, artist.id]} %>
-  <%= f.select :show_id, Show.all.collect {|show| [show.starts_at_date, show.id] } %>
-  <%= f.submit %>
-  <% end %>
+
+  <%= form_for @performance do |f| %>
+    <%= f.select :artist_id, Artist.all.collect { |artist| [artist.name, artist.id]}, :prompt => 'Artist' %>
+    <%= f.select :show_id, @upcoming.map {|show| ["#{show.starts_at_date} - #{show.venue}", show.id]}, :prompt => 'Date/Venue'%>
+    <%= f.submit %>
+    <% end %>
 </div
