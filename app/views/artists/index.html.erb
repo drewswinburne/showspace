@@ -1,11 +1,11 @@
 
-<main>
+<div class="artists">
 <% @artists.each do |artist| %>
 <div class="artist" style="background-image: url(<%= artist.img_url %>)">
-<a href="/artists/<%= artist.id %>">
+  <a href="/artists/<%= artist.id %>">
   <%= artist.name %>
 </a>
 </div>
   <% end %>
-  <h2><%= link_to "Add New Artist", new_artist_path %></h2>
-</main>
+</div>
+<h2><%= link_to "Add New Artist", new_artist_path %></h2>
