@@ -1,23 +1,47 @@
 class ShowsController < ApplicationController
- before_action :set_week, except: [:new, :create]
+ # before_action :index, except: [:new, :create]
+ before_action :index, :set_week, except: [:new, :create]
+  # before_action :set_date,  only: [:day]
+  # before_action :set_week,  only: [:week]
+  # before_action :set_month, only: [:month]
 
   def index
     @shows = Show.all
     @performances = Performance.all
+    # @performances = Performance.within_week(Date.current)
     end
 
 def set_week
   @today = Date.today # Today's date
   @days_from_this_week = (@today.at_beginning_of_week..@today.at_end_of_week).map
   @days_from_last_week = ((@today.at_beginning_of_week - 7.days)..(@today.at_end_of_week - 7.days)).map
+  @days_from_next_week = ((@today.at_beginning_of_week + 7.days)..(@today.at_end_of_week + 7.days)).map
+
 end
 
 def last_week
   @days_from_this_week = @days_from_last_week
-  @shows = Show.all
-
   render :index
 end
+
+def next_week
+  @days_from_this_week = @days_from_next_week
+  render :index
+end
+
+# this stuff is from date_paginate
+# def day
+#     @performances = Performance.within_day(@date)
+#   end
+#
+#   def week
+#     @performances = Performance.within_week(@date)
+#   end
+#
+#   def month
+#     @performances = Performance.within_month(@date)
+#   end
+
 
   def new
     @show = Show.new

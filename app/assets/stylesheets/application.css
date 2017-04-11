@@ -162,6 +162,56 @@ li a:hover{
   color: lemonchiffon;
 }
 
+.error {
+  color: red;
+  outline: red 3px solid;
+  background-color: rgba(12,12,12,.5);
+  padding: 6px;
+  list-style: none;
+  width: 300px;
+  /*margin: 0 auto;*/
+}
+
+textarea {
+  width: 350px;
+  font-family: inherit;
+}
+
+form {
+  border: white 3px solid;
+  border-radius: 10px;
+  padding: 12px;
+}
+
+input {
+  font-family: inherit;
+}
+
+label {
+  font-size: 20px;
+}
+
+  select, input[type=text] {
+  width: 100%;
+  font-size: 15px;
+  text-align-last:center;
+  margin: 12px 0;
+  height: 30px;
+}
+
+input[type=submit] {
+  background-color: white;
+  border-radius: 10px;
+  width: 100%;
+  font-size: 15px;
+  line-height: 15px;
+  float: left;
+  /*border: 0;*/
+  display: block;
+  margin: 15px 0;
+  height: 46px;
+}
+
 @media (max-width: 700px) {
 nav ul {
   flex-direction: column;
